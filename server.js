@@ -23,9 +23,7 @@ if (process.env.NODE_ENV === 'production'){
 app.use(express.static("my-app/build"))
 }
 
-app.get("*" , function(req , res) {
-    res.sendFile("./my-app/build/index.html")
-})
+ 
 app.listen(PORT)
 
 const user = process.env.DB_USERNAME;
